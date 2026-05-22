@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-05-22T21:39:56.778137+00:00",
+  "generated_at_moscow": "2026-05-23T00:39:56.778137+03:00",
+  "sources_count": 4,
+  "sources_ok": 4,
+  "sources_failed": 0,
+  "source_stats": [
+    {
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst",
+      "ok": true,
+      "domains": 1162
+    },
+    {
+      "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst",
+      "ok": true,
+      "domains": 81089
+    },
+    {
+      "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst",
+      "ok": true,
+      "domains": 672
+    },
+    {
+      "url": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/ru-bundle.lst",
+      "ok": true,
+      "domains": 1950
+    }
+  ],
+  "custom_domains_count": 26,
+  "exclude_suffix_count": 13,
+  "exclude_exact_count": 0,
+  "unique_before_exclude_count": 82333,
+  "duplicates_count": 1669,
+  "excluded_removed_count": 20,
+  "output_domains_count": 82313,
+  "errors": []
+}
