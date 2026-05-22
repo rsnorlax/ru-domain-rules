@@ -94,9 +94,9 @@ schedule:
 После первого успешного запуска будут доступны raw-ссылки:
 
 ```txt
-https://raw.githubusercontent.com/USER/REPO/main/dist/domains.txt
-https://raw.githubusercontent.com/USER/REPO/main/dist/rule-set.json
-https://raw.githubusercontent.com/USER/REPO/main/dist/rule-set.srs
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains.txt
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/rule-set.json
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/rule-set.srs
 ```
 
 Замени `USER/REPO` на свой репозиторий.
