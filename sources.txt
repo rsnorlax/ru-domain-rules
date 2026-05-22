@@ -1,0 +1,24 @@
+# Внешние источники доменов.
+# По одному URL на строку.
+#
+# Поддерживаются:
+#   - plain text / .lst
+#   - sing-box source JSON: {"version": 3, "rules": [...]}
+#
+# НЕ поддерживается как вход:
+#   - бинарный .srs
+#   - geoip.dat / geosite.dat
+#   - IP-only списки
+
+# itdoginfo: ресурсы, которые блокируются из России / имеют проблемы для российских пользователей
+https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst
+
+# Re:filter: отфильтрованные домены РКН + community-домены
+https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst
+https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst
+
+# legiz-ru: готовый RU bundle в текстовом виде
+https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/ru-bundle.lst
+
+# Пример sing-box source JSON, можно раскомментировать:
+# https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/unbanru-app-list.json

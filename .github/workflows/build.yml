@@ -1,0 +1,97 @@
+name: Build domain rule-set
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Ночь по Москве. GitHub Actions поддерживает timezone в schedule.
+    # Выбрано 03:17, а не ровно 03:00, чтобы меньше попадать в пиковую нагрузку в начале часа.
+    - cron: "17 3 * * *"
+      timezone: "Europe/Moscow"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build source rule-set
+        run: |
+          python scripts/build.py
+
+      - name: Install sing-box
+        run: |
+          set -euo pipefail
+
+          python - <<'PY' > /tmp/sing-box-url.txt
+          import json
+          import urllib.request
+
+          api = "https://api.github.com/repos/SagerNet/sing-box/releases/latest"
+
+          with urllib.request.urlopen(api, timeout=60) as response:
+              data = json.load(response)
+
+          for asset in data["assets"]:
+              name = asset["name"]
+              url = asset["browser_download_url"]
+
+              if (
+                  "linux-amd64" in name
+                  and name.endswith(".tar.gz")
+                  and "deb" not in name
+                  and "rpm" not in name
+              ):
+                  print(url)
+                  break
+          else:
+              raise SystemExit("Не найден sing-box linux-amd64 tar.gz в latest release")
+          PY
+
+          SING_BOX_URL="$(cat /tmp/sing-box-url.txt)"
+          echo "Downloading: ${SING_BOX_URL}"
+
+          curl -L "$SING_BOX_URL" -o /tmp/sing-box.tar.gz
+          mkdir -p /tmp/sing-box
+          tar -xzf /tmp/sing-box.tar.gz -C /tmp/sing-box
+
+          SING_BOX_BIN="$(find /tmp/sing-box -type f -name sing-box -perm -111 | head -n 1)"
+          if [ -z "$SING_BOX_BIN" ]; then
+            echo "sing-box binary not found"
+            exit 1
+          fi
+
+          "$SING_BOX_BIN" version
+          echo "SING_BOX_BIN=$SING_BOX_BIN" >> "$GITHUB_ENV"
+
+      - name: Compile binary .srs
+        run: |
+          "$SING_BOX_BIN" rule-set compile \
+            --output dist/rule-set.srs \
+            dist/rule-set.json
+
+      - name: Commit generated files
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dist/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Update generated domain rule-set"
+          git push

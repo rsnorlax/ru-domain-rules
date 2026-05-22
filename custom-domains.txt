@@ -1,0 +1,14 @@
+# Свои домены, которые нужно ДОБАВИТЬ в итоговый список.
+# По одному домену на строку.
+#
+# Поддерживаемые варианты:
+#   example.com
+#   *.example.com
+#   domain:example.com
+#   full:example.com
+#
+# В итоговом rule-set всё будет собрано как domain_suffix.
+#
+# Примеры:
+# example.com
+# sub.example.net

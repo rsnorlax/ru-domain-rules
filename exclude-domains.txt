@@ -1,0 +1,24 @@
+# Домены, которые нужно ИСКЛЮЧИТЬ из итогового списка.
+#
+# По умолчанию исключение работает по суффиксу:
+#   youtube.com
+# удалит:
+#   youtube.com
+#   www.youtube.com
+#   music.youtube.com
+#
+# Для exact-исключения используй:
+#   full:example.com
+
+youtube.com
+youtu.be
+yt.be
+ytimg.com
+ggpht.com
+googlevideo.com
+youtube-nocookie.com
+youtubei.googleapis.com
+youtubeembeddedplayer.googleapis.com
+youtube-ui.l.google.com
+yt-video-upload.l.google.com
+yt3.googleusercontent.com
