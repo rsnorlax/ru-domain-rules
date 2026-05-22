@@ -12,3 +12,30 @@
 # Примеры:
 # example.com
 # sub.example.net
+wallhaven.cc
+ati.com
+softether.org
+qbittorrent.org
+emclient.com
+cinebench.net
+maxon.net
+ul.com
+technical.city
+cloudconvert.com
+upscayl.org
+sipeed.com
+amazon.com
+versus.com
+4pda.to
+realme.com
+realme.com
+realmemobile.com
+coloros.com
+allawnos.com
+allawntech.com
+stacher.io
+zoiper.com
+habr.com
+notebookcheck-ru.com
+acasis.com
+lanik.us
