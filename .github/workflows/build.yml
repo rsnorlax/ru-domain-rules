@@ -2,6 +2,11 @@ name: Build domain rule-set
 
 on:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why run the build"
+        required: false
+        default: "manual"
   schedule:
     # 03:17 по Москве = 00:17 UTC.
     # GitHub Actions schedule всегда использует UTC.
