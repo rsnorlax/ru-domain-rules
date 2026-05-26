@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-05-26T04:36:01.942314+00:00",
-  "generated_at_moscow": "2026-05-26T07:36:01.942314+03:00",
+  "generated_at_utc": "2026-05-26T12:53:05.701517+00:00",
+  "generated_at_moscow": "2026-05-26T15:53:05.701517+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -26,12 +26,15 @@
       "domains": 1950
     }
   ],
-  "custom_domains_count": 26,
-  "exclude_suffix_count": 13,
+  "custom_domains_count": 27,
+  "exclude_suffix_count": 26,
   "exclude_exact_count": 0,
-  "unique_before_exclude_count": 82333,
+  "excluded_rule_exclude_suffix_count": 12,
+  "excluded_rule_exclude_exact_count": 0,
+  "unique_before_exclude_count": 82334,
   "duplicates_count": 1669,
-  "excluded_removed_count": 20,
-  "output_domains_count": 82313,
+  "excluded_removed_count": 34,
+  "excluded_rule_output_domains_count": 18,
+  "output_domains_count": 82300,
   "errors": []
 }
