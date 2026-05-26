@@ -83,6 +83,10 @@ jobs:
             --output dist/rule-set.srs \
             dist/rule-set.json
 
+          "$SING_BOX_BIN" rule-set compile \
+            --output dist/excluded-rule-set.srs \
+            dist/excluded-rule-set.json
+
       - name: Commit generated files
         run: |
           set -euo pipefail

@@ -8,10 +8,12 @@
   sources.txt          - URL внешних списков доменов, по одному URL на строку
   custom-domains.txt   - домены, которые нужно добавить вручную
   exclude-domains.txt  - домены, которые нужно исключить
+  excluded-rule-exclude-domains.txt - домены, которые не включать в excluded rule-set
 
 Выход:
   dist/domains.txt      - итоговый чистый список доменов без дублей
   dist/rule-set.json    - sing-box source rule-set
+  dist/excluded-rule-set.json - sing-box source rule-set из исключенных доменов
   dist/duplicates.txt   - найденные дубли
   dist/metadata.json    - статистика сборки
 
@@ -39,6 +41,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "sources.txt"
 CUSTOM_FILE = ROOT / "custom-domains.txt"
 EXCLUDE_FILE = ROOT / "exclude-domains.txt"
+EXCLUDED_RULE_EXCLUDE_FILE = ROOT / "excluded-rule-exclude-domains.txt"
 DIST_DIR = ROOT / "dist"
 
 DOMAIN_RE = re.compile(
@@ -299,6 +302,34 @@ def is_excluded(domain: str, exact_excludes: set[str], suffix_excludes: set[str]
     return False
 
 
+def read_excludes(path: Path) -> tuple[set[str], set[str]]:
+    exact_excludes: set[str] = set()
+    suffix_excludes: set[str] = set()
+
+    for raw in read_lines(path):
+        item = normalize_exclude(raw)
+        if not item:
+            continue
+        mode, domain = item
+        if mode == "full":
+            exact_excludes.add(domain)
+        else:
+            suffix_excludes.add(domain)
+
+    return exact_excludes, suffix_excludes
+
+
+def make_rule_set(domains: list[str]) -> dict[str, object]:
+    return {
+        "version": 3,
+        "rules": [
+            {
+                "domain_suffix": domains
+            }
+        ],
+    }
+
+
 def write_list(path: Path, values: list[str]) -> None:
     path.write_text("\n".join(values) + ("\n" if values else ""), encoding="utf-8")
 
@@ -355,17 +386,10 @@ def main() -> int:
         all_domains_counter[domain] += 1
         domain_sources[domain].add("custom-domains.txt")
 
-    exact_excludes: set[str] = set()
-    suffix_excludes: set[str] = set()
-    for raw in read_lines(EXCLUDE_FILE):
-        item = normalize_exclude(raw)
-        if not item:
-            continue
-        mode, domain = item
-        if mode == "full":
-            exact_excludes.add(domain)
-        else:
-            suffix_excludes.add(domain)
+    exact_excludes, suffix_excludes = read_excludes(EXCLUDE_FILE)
+    excluded_rule_exact_excludes, excluded_rule_suffix_excludes = read_excludes(
+        EXCLUDED_RULE_EXCLUDE_FILE
+    )
 
     before_exclude = set(all_domains_counter.keys())
     final_domains = sorted(
@@ -374,6 +398,15 @@ def main() -> int:
         if not is_excluded(domain, exact_excludes, suffix_excludes)
     )
     excluded_domains = sorted(before_exclude - set(final_domains))
+    excluded_rule_domains = sorted(
+        domain
+        for domain in excluded_domains
+        if not is_excluded(
+            domain,
+            excluded_rule_exact_excludes,
+            excluded_rule_suffix_excludes,
+        )
+    )
 
     duplicates = sorted(
         (domain, count)
@@ -381,23 +414,22 @@ def main() -> int:
         if count > 1
     )
 
-    rule_set = {
-        "version": 3,
-        "rules": [
-            {
-                "domain_suffix": final_domains
-            }
-        ],
-    }
+    rule_set = make_rule_set(final_domains)
+    excluded_rule_set = make_rule_set(excluded_rule_domains)
 
     write_list(DIST_DIR / "domains.txt", final_domains)
     write_list(DIST_DIR / "excluded-hit.txt", excluded_domains)
+    write_list(DIST_DIR / "excluded-domains.txt", excluded_rule_domains)
     write_list(
         DIST_DIR / "duplicates.txt",
         [f"{domain} {count}" for domain, count in duplicates],
     )
     (DIST_DIR / "rule-set.json").write_text(
         json.dumps(rule_set, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    (DIST_DIR / "excluded-rule-set.json").write_text(
+        json.dumps(excluded_rule_set, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
@@ -417,9 +449,12 @@ def main() -> int:
         "custom_domains_count": len(custom_domains),
         "exclude_suffix_count": len(suffix_excludes),
         "exclude_exact_count": len(exact_excludes),
+        "excluded_rule_exclude_suffix_count": len(excluded_rule_suffix_excludes),
+        "excluded_rule_exclude_exact_count": len(excluded_rule_exact_excludes),
         "unique_before_exclude_count": len(before_exclude),
         "duplicates_count": len(duplicates),
         "excluded_removed_count": len(excluded_domains),
+        "excluded_rule_output_domains_count": len(excluded_rule_domains),
         "output_domains_count": len(final_domains),
         "errors": errors,
     }
@@ -439,6 +474,8 @@ def main() -> int:
     print(f"  rule-set.json:    sing-box source rule-set")
     print(f"  duplicates.txt:   {len(duplicates)} дублей")
     print(f"  excluded-hit.txt: {len(excluded_domains)} удалено по exclude")
+    print(f"  excluded-domains.txt: {len(excluded_rule_domains)} доменов")
+    print(f"  excluded-rule-set.json: sing-box source rule-set")
     print(f"  metadata.json:    статистика сборки")
 
     return 0

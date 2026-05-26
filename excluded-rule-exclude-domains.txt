@@ -1,0 +1,13 @@
+# Домены, которые НЕ нужно включать во второй rule-set из исключенных доменов.
+#
+# Этот файл применяется только к:
+#   dist/excluded-domains.txt
+#   dist/excluded-rule-set.json
+#   dist/excluded-rule-set.srs
+#
+# Формат такой же, как в exclude-domains.txt:
+#   example.com
+# удалит example.com и все его поддомены из excluded rule-set.
+#
+# Для exact-исключения используй:
+#   full:example.com
