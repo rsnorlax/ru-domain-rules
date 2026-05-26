@@ -3,10 +3,9 @@ name: Build domain rule-set
 on:
   workflow_dispatch:
   schedule:
-    # Ночь по Москве. GitHub Actions поддерживает timezone в schedule.
-    # Выбрано 03:17, а не ровно 03:00, чтобы меньше попадать в пиковую нагрузку в начале часа.
-    - cron: "17 3 * * *"
-      timezone: "Europe/Moscow"
+    # 03:17 по Москве = 00:17 UTC.
+    # GitHub Actions schedule всегда использует UTC.
+    - cron: "17 0 * * *"
 
 permissions:
   contents: write
