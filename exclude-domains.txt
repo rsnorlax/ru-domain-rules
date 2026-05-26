@@ -23,3 +23,16 @@ youtube-ui.l.google.com
 yt-video-upload.l.google.com
 yt3.googleusercontent.com
 nnmclub.to
+telegram.org
+t.me
+telegram.me
+tdesktop.com
+telegra.ph
+telegram-cdn.org
+cdn-telegram.org
+telegram.dog
+telegram.space
+telesco.pe
+tg.dev
+tx.me
+telega.one
