@@ -40,3 +40,11 @@ habr.com
 notebookcheck-ru.com
 acasis.com
 lanik.us
+# WhatsApp full-ish через VPN
+whatsapp.com
+whatsapp.net
+wa.me
+wl.co
+whatsapp.org
+whatsapp.info
+whatsappbrand.com
