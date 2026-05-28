@@ -1537,7 +1537,7 @@ vpnpay.io 3
 vrv.co 3
 vyos.io 4
 w.atwiki.jp 2
-wa.me 4
+wa.me 5
 wallpapercave.com 2
 walmart.com 2
 wariolandshakeit.com 2
@@ -1560,12 +1560,12 @@ whatsapp-plus.me 2
 whatsapp-plus.net 2
 whatsapp.biz 2
 whatsapp.cc 2
-whatsapp.com 4
-whatsapp.info 2
-whatsapp.net 4
-whatsapp.org 2
+whatsapp.com 5
+whatsapp.info 3
+whatsapp.net 5
+whatsapp.org 3
 whatsapp.tv 2
-whatsappbrand.com 2
+whatsappbrand.com 3
 wheather.com 3
 whispersystems.org 2
 white.instagram.com 2
