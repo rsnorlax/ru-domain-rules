@@ -498,7 +498,6 @@ gamedistribution.com 2
 gamesrepack.com 2
 gamestop.com 2
 gaming.amazon.com 2
-gateway.discord.gg 2
 geforcenow.com 2
 gelbooru.com 3
 gemini.google.com 3
@@ -551,7 +550,7 @@ grizzlysms.com 3
 grok.com 4
 grok.x.com 2
 groq.com 2
-groupon.com 2
+groupon.com 3
 gtagarage.com 2
 guilded.gg 2
 gulagu.net 2
@@ -963,7 +962,7 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 2
+opensea.io 3
 opentrackr.org 2
 openwrt.wk.cz 3
 opposition-news.com 2
@@ -1312,7 +1311,7 @@ stable.dl2.discordapp.net 2
 stalker2.com 2
 starfox.com 2
 startmail.com 3
-startpage.com 2
+startpage.com 3
 static.cdninstagram.com 2
 static.files.bbci.co.uk 3
 static.lostfilm.top 2
