@@ -2,7 +2,10 @@
   "version": 3,
   "rules": [
     {
-      "domain_suffix": []
+      "domain_suffix": [
+        "pornhub.com",
+        "ru.pornhub.com"
+      ]
     }
   ]
 }
