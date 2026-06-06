@@ -580,7 +580,7 @@ helm.releases.hashicorp.com 3
 help.instagram.com 2
 hentai-foundry.com 2
 herokucdn.com 2
-hetzner.com 3
+hetzner.com 4
 hitomi.la 3
 hollisterco.com 2
 holod.media 3
