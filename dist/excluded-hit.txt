@@ -1,4 +1,3 @@
-cdn-telegram.org
 ggpht.com
 googlevideo.com
 i.ytimg.com
