@@ -53,3 +53,5 @@ rt.pornhub.org
 rt.pornhub.com
 hetzner.com
 ash-speed.hetzner.com
+testfile.org
+thinkbroadband.com
