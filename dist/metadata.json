@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-07T13:41:18.436285+00:00",
-  "generated_at_moscow": "2026-06-07T16:41:18.436285+03:00",
+  "generated_at_utc": "2026-06-07T13:49:24.985821+00:00",
+  "generated_at_moscow": "2026-06-07T16:49:24.985821+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -29,7 +29,7 @@
   "custom_domains_count": 41,
   "exclude_suffix_count": 12,
   "exclude_exact_count": 0,
-  "excluded_rule_exclude_suffix_count": 12,
+  "excluded_rule_exclude_suffix_count": 26,
   "excluded_rule_exclude_exact_count": 0,
   "unique_before_exclude_count": 82505,
   "duplicates_count": 1668,
