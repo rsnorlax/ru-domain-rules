@@ -11550,7 +11550,6 @@ cdek-top.ru
 cdelka21v.ru
 cdix.com.br
 cdn-client.medium.com
-cdn-telegram.org
 cdn.24.co.za
 cdn.allporncomic.com
 cdn.betterttv.net
@@ -60473,7 +60472,6 @@ t.indatab.org
 t.iss.one
 t.ks.ua
 t.lafa.ws
-t.me
 t.metan-russ.net
 t.rgepatitofs.ru
 t.stopfilms.info
@@ -60852,7 +60850,6 @@ tdarbat.ru
 tdc-tatar.ru
 tdenga.biz
 tdeniga-biz.esti.city
-tdesktop.com
 tdglobalnet.org
 tdgol.ru
 tdhuter.ru
@@ -61103,19 +61100,10 @@ telefonu.top
 teleg.cc
 telega-blog.ru
 telega.one
-telegra.ph
 telegraf.by
 telegraf.com.ua
 telegraf.news
 telegrafua.com
-telegram-cdn.org
-telegram.app
-telegram.com
-telegram.dev
-telegram.dog
-telegram.me
-telegram.org
-telegram.space
 telegramas.ru
 telegramcatalog.com
 telegramchannels.me
@@ -61131,7 +61119,6 @@ teleportal.mirfilm.net
 teleportal.ua
 teleportalworld.com
 teleprogramma-film.site
-telesco.pe
 telescopow.net
 teleskopov.net
 teleskopow.net
@@ -61413,7 +61400,6 @@ tg-adult.com
 tg-osint.org
 tg-sliv.ru
 tg-slivator.ru
-tg.dev
 tg.scryde.site
 tg.stloe.ru
 tg18.net
