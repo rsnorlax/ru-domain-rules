@@ -80,12 +80,20 @@ jobs:
       - name: Compile binary .srs
         run: |
           "$SING_BOX_BIN" rule-set compile \
-            --output dist/rule-set.srs \
-            dist/rule-set.json
+            --output dist/domains.srs \
+            dist/domains.json
 
           "$SING_BOX_BIN" rule-set compile \
-            --output dist/excluded-rule-set.srs \
-            dist/excluded-rule-set.json
+            --output dist/domains2.srs \
+            dist/domains2.json
+
+          "$SING_BOX_BIN" rule-set compile \
+            --output dist/domains3.srs \
+            dist/domains3.json
+
+          "$SING_BOX_BIN" rule-set compile \
+            --output dist/dpi.srs \
+            dist/dpi.json
 
       - name: Commit generated files
         run: |

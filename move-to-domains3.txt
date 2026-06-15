@@ -1,0 +1,5 @@
+# Домены, которые нужно перенести из основного списка в dist/domains3.json.
+#
+# Формат:
+#   example.com       -> example.com и все поддомены
+#   full:example.com  -> только example.com

@@ -7,19 +7,21 @@
 Вход:
   sources.txt          - URL внешних списков доменов, по одному URL на строку
   custom-domains.txt   - домены, которые нужно добавить вручную
-  exclude-domains.txt  - домены, которые нужно исключить
-  excluded-rule-exclude-domains.txt - домены, которые не включать в excluded rule-set
+  move-to-domains2.txt - правила доменов, которые нужно перенести в domains2
+  move-to-domains3.txt - правила доменов, которые нужно перенести в domains3
+  move-to-dpi.txt      - правила доменов, которые нужно перенести в dpi
 
 Выход:
-  dist/domains.txt      - итоговый чистый список доменов без дублей
-  dist/rule-set.json    - sing-box source rule-set
-  dist/excluded-rule-set.json - sing-box source rule-set из исключенных доменов
+  dist/domains.json     - основной sing-box source rule-set
+  dist/domains2.json    - второй sing-box source rule-set
+  dist/domains3.json    - третий sing-box source rule-set
+  dist/dpi.json         - DPI sing-box source rule-set
   dist/duplicates.txt   - найденные дубли
   dist/metadata.json    - статистика сборки
 
-exclude-domains.txt:
-  example.com       -> исключит example.com и все его поддомены
-  full:example.com  -> исключит только exact example.com
+move-to-*.txt:
+  example.com       -> перенесет example.com и все его поддомены
+  full:example.com  -> перенесет только exact example.com
 """
 
 from __future__ import annotations
@@ -32,7 +34,7 @@ import sys
 import time
 import urllib.request
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
@@ -40,8 +42,9 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "sources.txt"
 CUSTOM_FILE = ROOT / "custom-domains.txt"
-EXCLUDE_FILE = ROOT / "exclude-domains.txt"
-EXCLUDED_RULE_EXCLUDE_FILE = ROOT / "excluded-rule-exclude-domains.txt"
+MOVE_TO_DOMAINS2_FILE = ROOT / "move-to-domains2.txt"
+MOVE_TO_DOMAINS3_FILE = ROOT / "move-to-domains3.txt"
+MOVE_TO_DPI_FILE = ROOT / "move-to-dpi.txt"
 DIST_DIR = ROOT / "dist"
 
 DOMAIN_RE = re.compile(
@@ -183,10 +186,10 @@ def normalize_domain(raw: str) -> str | None:
     return lower
 
 
-def normalize_exclude(raw: str) -> tuple[str, str] | None:
+def normalize_move_rule(raw: str) -> tuple[str, str] | None:
     """
     Возвращает ('suffix', domain) или ('full', domain).
-    По умолчанию исключение суффиксное:
+    По умолчанию правило суффиксное:
       youtube.com -> youtube.com и *.youtube.com
     """
     line = strip_comment(raw)
@@ -291,32 +294,58 @@ def extract_domains_from_text(text: str) -> set[str]:
     return found
 
 
-def is_excluded(domain: str, exact_excludes: set[str], suffix_excludes: set[str]) -> bool:
-    if domain in exact_excludes:
+def matches_move_rule(domain: str, exact_rules: set[str], suffix_rules: set[str]) -> bool:
+    if domain in exact_rules:
         return True
 
-    for excluded in suffix_excludes:
-        if domain == excluded or domain.endswith("." + excluded):
+    for suffix_rule in suffix_rules:
+        if domain == suffix_rule or domain.endswith("." + suffix_rule):
             return True
 
     return False
 
 
-def read_excludes(path: Path) -> tuple[set[str], set[str]]:
-    exact_excludes: set[str] = set()
-    suffix_excludes: set[str] = set()
+def read_move_rules(path: Path) -> tuple[set[str], set[str]]:
+    exact_rules: set[str] = set()
+    suffix_rules: set[str] = set()
 
     for raw in read_lines(path):
-        item = normalize_exclude(raw)
+        item = normalize_move_rule(raw)
         if not item:
             continue
         mode, domain = item
         if mode == "full":
-            exact_excludes.add(domain)
+            exact_rules.add(domain)
         else:
-            suffix_excludes.add(domain)
+            suffix_rules.add(domain)
 
-    return exact_excludes, suffix_excludes
+    return exact_rules, suffix_rules
+
+
+def split_into_channels(
+    all_domains: set[str],
+    domains2_rules: tuple[set[str], set[str]],
+    domains3_rules: tuple[set[str], set[str]],
+    dpi_rules: tuple[set[str], set[str]],
+) -> dict[str, list[str]]:
+    channels: dict[str, list[str]] = {
+        "domains": [],
+        "domains2": [],
+        "domains3": [],
+        "dpi": [],
+    }
+
+    for domain in sorted(all_domains):
+        if matches_move_rule(domain, *dpi_rules):
+            channels["dpi"].append(domain)
+        elif matches_move_rule(domain, *domains3_rules):
+            channels["domains3"].append(domain)
+        elif matches_move_rule(domain, *domains2_rules):
+            channels["domains2"].append(domain)
+        else:
+            channels["domains"].append(domain)
+
+    return channels
 
 
 def make_rule_set(domains: list[str]) -> dict[str, object]:
@@ -332,6 +361,28 @@ def make_rule_set(domains: list[str]) -> dict[str, object]:
 
 def write_list(path: Path, values: list[str]) -> None:
     path.write_text("\n".join(values) + ("\n" if values else ""), encoding="utf-8")
+
+
+def write_rule_set(path: Path, domains: list[str]) -> None:
+    path.write_text(
+        json.dumps(make_rule_set(domains), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def remove_legacy_outputs() -> None:
+    for name in (
+        "domains.txt",
+        "rule-set.json",
+        "rule-set.srs",
+        "excluded-domains.txt",
+        "excluded-rule-set.json",
+        "excluded-rule-set.srs",
+        "excluded-hit.txt",
+    ):
+        path = DIST_DIR / name
+        if path.exists():
+            path.unlink()
 
 
 def main() -> int:
@@ -386,26 +437,16 @@ def main() -> int:
         all_domains_counter[domain] += 1
         domain_sources[domain].add("custom-domains.txt")
 
-    exact_excludes, suffix_excludes = read_excludes(EXCLUDE_FILE)
-    excluded_rule_exact_excludes, excluded_rule_suffix_excludes = read_excludes(
-        EXCLUDED_RULE_EXCLUDE_FILE
-    )
+    domains2_rules = read_move_rules(MOVE_TO_DOMAINS2_FILE)
+    domains3_rules = read_move_rules(MOVE_TO_DOMAINS3_FILE)
+    dpi_rules = read_move_rules(MOVE_TO_DPI_FILE)
 
-    before_exclude = set(all_domains_counter.keys())
-    final_domains = sorted(
-        domain
-        for domain in before_exclude
-        if not is_excluded(domain, exact_excludes, suffix_excludes)
-    )
-    excluded_domains = sorted(before_exclude - set(final_domains))
-    excluded_rule_domains = sorted(
-        domain
-        for domain in excluded_domains
-        if not is_excluded(
-            domain,
-            excluded_rule_exact_excludes,
-            excluded_rule_suffix_excludes,
-        )
+    all_domains = set(all_domains_counter.keys())
+    channels = split_into_channels(
+        all_domains=all_domains,
+        domains2_rules=domains2_rules,
+        domains3_rules=domains3_rules,
+        dpi_rules=dpi_rules,
     )
 
     duplicates = sorted(
@@ -414,48 +455,43 @@ def main() -> int:
         if count > 1
     )
 
-    rule_set = make_rule_set(final_domains)
-    excluded_rule_set = make_rule_set(excluded_rule_domains)
+    remove_legacy_outputs()
 
-    write_list(DIST_DIR / "domains.txt", final_domains)
-    write_list(DIST_DIR / "excluded-hit.txt", excluded_domains)
-    write_list(DIST_DIR / "excluded-domains.txt", excluded_rule_domains)
     write_list(
         DIST_DIR / "duplicates.txt",
         [f"{domain} {count}" for domain, count in duplicates],
     )
-    (DIST_DIR / "rule-set.json").write_text(
-        json.dumps(rule_set, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    (DIST_DIR / "excluded-rule-set.json").write_text(
-        json.dumps(excluded_rule_set, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    write_rule_set(DIST_DIR / "domains.json", channels["domains"])
+    write_rule_set(DIST_DIR / "domains2.json", channels["domains2"])
+    write_rule_set(DIST_DIR / "domains3.json", channels["domains3"])
+    write_rule_set(DIST_DIR / "dpi.json", channels["dpi"])
 
     now_utc = datetime.now(timezone.utc)
     try:
         now_moscow = now_utc.astimezone(ZoneInfo("Europe/Moscow"))
     except Exception:
-        now_moscow = None
+        now_moscow = now_utc.astimezone(timezone(timedelta(hours=3), "MSK"))
 
     metadata = {
         "generated_at_utc": now_utc.isoformat(),
-        "generated_at_moscow": now_moscow.isoformat() if now_moscow else None,
+        "generated_at_moscow": now_moscow.isoformat(),
         "sources_count": len(source_urls),
         "sources_ok": sum(1 for item in source_stats if item.get("ok")),
         "sources_failed": sum(1 for item in source_stats if not item.get("ok")),
         "source_stats": source_stats,
         "custom_domains_count": len(custom_domains),
-        "exclude_suffix_count": len(suffix_excludes),
-        "exclude_exact_count": len(exact_excludes),
-        "excluded_rule_exclude_suffix_count": len(excluded_rule_suffix_excludes),
-        "excluded_rule_exclude_exact_count": len(excluded_rule_exact_excludes),
-        "unique_before_exclude_count": len(before_exclude),
+        "move_to_domains2_suffix_count": len(domains2_rules[1]),
+        "move_to_domains2_exact_count": len(domains2_rules[0]),
+        "move_to_domains3_suffix_count": len(domains3_rules[1]),
+        "move_to_domains3_exact_count": len(domains3_rules[0]),
+        "move_to_dpi_suffix_count": len(dpi_rules[1]),
+        "move_to_dpi_exact_count": len(dpi_rules[0]),
+        "all_domains_count": len(all_domains),
         "duplicates_count": len(duplicates),
-        "excluded_removed_count": len(excluded_domains),
-        "excluded_rule_output_domains_count": len(excluded_rule_domains),
-        "output_domains_count": len(final_domains),
+        "output_domains_count": len(channels["domains"]),
+        "output_domains2_count": len(channels["domains2"]),
+        "output_domains3_count": len(channels["domains3"]),
+        "output_dpi_count": len(channels["dpi"]),
         "errors": errors,
     }
 
@@ -464,18 +500,17 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    if not final_domains:
-        print("[ERROR] Итоговый список пустой. Проверь sources/custom/exclude.", file=sys.stderr)
+    if not any(channels.values()):
+        print("[ERROR] Итоговые списки пустые. Проверь sources/custom/move-to.", file=sys.stderr)
         return 1
 
     print("")
     print("Готово:")
-    print(f"  domains.txt:      {len(final_domains)} доменов")
-    print(f"  rule-set.json:    sing-box source rule-set")
+    print(f"  domains.json:     {len(channels['domains'])} доменов")
+    print(f"  domains2.json:    {len(channels['domains2'])} доменов")
+    print(f"  domains3.json:    {len(channels['domains3'])} доменов")
+    print(f"  dpi.json:         {len(channels['dpi'])} доменов")
     print(f"  duplicates.txt:   {len(duplicates)} дублей")
-    print(f"  excluded-hit.txt: {len(excluded_domains)} удалено по exclude")
-    print(f"  excluded-domains.txt: {len(excluded_rule_domains)} доменов")
-    print(f"  excluded-rule-set.json: sing-box source rule-set")
     print(f"  metadata.json:    статистика сборки")
 
     return 0

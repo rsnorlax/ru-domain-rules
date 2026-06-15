@@ -1,0 +1,8 @@
+# Домены, которые нужно перенести только в dist/dpi.json.
+#
+# DPI-канал имеет самый высокий приоритет: совпавший домен не попадет
+# в domains/domains2/domains3.
+#
+# Формат:
+#   example.com       -> example.com и все поддомены
+#   full:example.com  -> только example.com

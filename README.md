@@ -4,23 +4,25 @@
 
 ## Что делает
 
-1. Берёт внешние источники из `sources.txt`.
-2. Добавляет твои домены из `custom-domains.txt`.
-3. Удаляет всё, что указано в `exclude-domains.txt`.
-4. Из удаленных доменов собирает отдельный excluded rule-set.
-5. Из excluded rule-set дополнительно удаляет всё, что указано в `excluded-rule-exclude-domains.txt`.
-6. Нормализует домены.
-7. Убирает дубли.
-8. Собирает:
-   - `dist/domains.txt`
-   - `dist/rule-set.json`
-   - `dist/rule-set.srs`
-   - `dist/excluded-domains.txt`
-   - `dist/excluded-rule-set.json`
-   - `dist/excluded-rule-set.srs`
+1. Берет внешние источники из `sources.txt`.
+2. Добавляет домены из `custom-domains.txt`.
+3. Нормализует домены и убирает дубли.
+4. Раскладывает общий набор доменов по каналам:
+   - `domains`
+   - `domains2`
+   - `domains3`
+   - `dpi`
+5. Собирает:
+   - `dist/domains.json`
+   - `dist/domains.srs`
+   - `dist/domains2.json`
+   - `dist/domains2.srs`
+   - `dist/domains3.json`
+   - `dist/domains3.srs`
+   - `dist/dpi.json`
+   - `dist/dpi.srs`
    - `dist/metadata.json`
    - `dist/duplicates.txt`
-   - `dist/excluded-hit.txt`
 
 ## Файлы управления
 
@@ -41,7 +43,7 @@
 
 ### `custom-domains.txt`
 
-Сюда добавляются свои домены.
+Сюда добавляются свои домены в общий набор `all_domains`.
 
 Пример:
 
@@ -49,37 +51,44 @@
 example.com
 *.example.net
 domain:example.org
-```
-
-### `exclude-domains.txt`
-
-Сюда добавляются домены, которые надо вырезать.
-
-```txt
-youtube.com
-googlevideo.com
-```
-
-По умолчанию исключение суффиксное. То есть `youtube.com` удалит и `youtube.com`, и `music.youtube.com`.
-
-Для удаления только точного домена:
-
-```txt
 full:example.com
 ```
 
-### `excluded-rule-exclude-domains.txt`
+В итоговых rule-set домены записываются как `domain_suffix`.
 
-Сюда добавляются домены, которые не должны попадать во второй rule-set из исключенных доменов.
+### `move-to-domains2.txt`
 
-Например, если `youtube.com` есть в `exclude-domains.txt`, он будет удален из основного `dist/rule-set.json` и попадет в `dist/excluded-rule-set.json`. Если при этом добавить `youtube.com` в `excluded-rule-exclude-domains.txt`, он не попадет и во второй rule-set.
+Правила доменов, которые нужно убрать из основного `domains` и положить в `domains2`.
 
-Формат такой же:
+### `move-to-domains3.txt`
+
+Правила доменов, которые нужно убрать из основного `domains` и положить в `domains3`.
+
+### `move-to-dpi.txt`
+
+Правила доменов, которые нужно убрать из обычных списков `domains` / `domains2` / `domains3` и положить только в `dpi`.
+
+## Формат move-to правил
+
+Формат одинаковый для всех `move-to-*.txt`:
 
 ```txt
-youtube.com
-full:example.com
+example.com
+full:example.net
 ```
+
+`example.com` работает как суффиксное правило: совпадет `example.com` и любой его поддомен.
+
+`full:example.net` работает как точное правило: совпадет только `example.net`.
+
+Приоритеты:
+
+1. `move-to-dpi.txt`
+2. `move-to-domains3.txt`
+3. `move-to-domains2.txt`
+4. `domains`, если домен не совпал ни с одним правилом
+
+Один домен попадает только в один итоговый список.
 
 ## Ручной запуск локально
 
@@ -90,13 +99,10 @@ python scripts/build.py
 Если установлен `sing-box`, можно собрать `.srs`:
 
 ```bash
-sing-box rule-set compile \
-  --output dist/rule-set.srs \
-  dist/rule-set.json
-
-sing-box rule-set compile \
-  --output dist/excluded-rule-set.srs \
-  dist/excluded-rule-set.json
+sing-box rule-set compile --output dist/domains.srs dist/domains.json
+sing-box rule-set compile --output dist/domains2.srs dist/domains2.json
+sing-box rule-set compile --output dist/domains3.srs dist/domains3.json
+sing-box rule-set compile --output dist/dpi.srs dist/dpi.json
 ```
 
 ## Автоматический запуск
@@ -114,18 +120,12 @@ GitHub Actions использует UTC, поэтому `00:17 UTC` соотве
 
 ## URL для использования
 
-После первого успешного запуска будут доступны raw-ссылки:
-
 ```txt
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains.txt
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/rule-set.json
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/rule-set.srs
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/excluded-domains.txt
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/excluded-rule-set.json
-https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/excluded-rule-set.srs
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains.srs
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains2.srs
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains3.srs
+https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/dpi.srs
 ```
-
-Замени `USER/REPO` на свой репозиторий.
 
 ## Пример для sing-box / Podkop
 
@@ -134,7 +134,7 @@ https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/excluded-ru
   "type": "remote",
   "tag": "custom-ru-domains",
   "format": "binary",
-  "url": "https://raw.githubusercontent.com/USER/REPO/main/dist/rule-set.srs",
+  "url": "https://raw.githubusercontent.com/rsnorlax/ru-domain-rules/main/dist/domains.srs",
   "download_detour": "direct"
 }
 ```
