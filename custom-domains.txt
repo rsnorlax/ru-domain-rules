@@ -55,3 +55,4 @@ hetzner.com
 ash-speed.hetzner.com
 testfile.org
 thinkbroadband.com
+mi.com
