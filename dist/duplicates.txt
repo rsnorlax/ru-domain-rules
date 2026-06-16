@@ -22,6 +22,7 @@ academy.terrasoft.ua 2
 account.wbgames.com 2
 activatica.org 3
 adafruit.com 3
+adguard-vpn.com 2
 adguard.com 4
 adidas.com 2
 admin.instagram.com 2
@@ -108,7 +109,7 @@ apkmirror.com 3
 aplawrence.com 3
 app.m3u.in 3
 app.paraswap.io 3
-app.zerossl.com 4
+app.zerossl.com 3
 appstorrent.ru 3
 apt.releases.hashicorp.com 3
 aqicn.org 3
@@ -657,8 +658,8 @@ joesandbox.com 2
 jskor.ill.in.ua 2
 jut-su.net 2
 jut.su 3
-jw-russia.org 3
-jw.org 3
+jw-russia.org 2
+jw.org 2
 k1-api.wbagora.com 2
 kaktus.media 3
 kaleido.ai 2
@@ -1087,6 +1088,7 @@ psiphon.ca 3
 public.parsec.app 2
 pump.fun 3
 pvpessence.com 2
+qobuz.com 2
 qodana.cloud 2
 qoder.com 2
 qt.io 2
@@ -1546,6 +1548,7 @@ watchguard.com 4
 watermarkremover.io 2
 wbagora.com 2
 wbgames.com 2
+wdfiles.com 2
 weather.com 4
 weblance.com.ua 3
 webmd.com 2
@@ -1662,6 +1665,7 @@ zbigz.com 2
 zedge.net 2
 zendesk.com 3
 zerkalo.io 3
+zerossl.com 2
 znanija.com 3
 zohomail.com 3
 zolika1351.pages.dev 2

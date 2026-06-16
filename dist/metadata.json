@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-16T10:36:54.169632+00:00",
-  "generated_at_moscow": "2026-06-16T13:36:54.169632+03:00",
+  "generated_at_utc": "2026-06-16T23:14:01.940978+00:00",
+  "generated_at_moscow": "2026-06-17T02:14:01.940978+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -8,7 +8,7 @@
     {
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst",
       "ok": true,
-      "domains": 1162
+      "domains": 1182
     },
     {
       "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst",
@@ -26,16 +26,16 @@
       "domains": 1953
     }
   ],
-  "custom_domains_count": 42,
+  "custom_domains_count": 44,
   "move_to_domains2_suffix_count": 14,
   "move_to_domains2_exact_count": 0,
   "move_to_domains3_suffix_count": 6,
   "move_to_domains3_exact_count": 0,
   "move_to_dpi_suffix_count": 12,
   "move_to_dpi_exact_count": 0,
-  "all_domains_count": 82508,
-  "duplicates_count": 1668,
-  "output_domains_count": 82462,
+  "all_domains_count": 82529,
+  "duplicates_count": 1672,
+  "output_domains_count": 82483,
   "output_domains2_count": 14,
   "output_domains3_count": 14,
   "output_dpi_count": 18,
