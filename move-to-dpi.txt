@@ -22,5 +22,3 @@ yt3.googleusercontent.com
 youtube.googleapis.com
 wide-youtube.l.google.com
 ytimg.l.google.com
-gvt1.com
-youtubekids.com
