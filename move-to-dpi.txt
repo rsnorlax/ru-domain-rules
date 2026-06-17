@@ -7,18 +7,8 @@
 #   example.com       -> example.com и все поддомены
 #   full:example.com  -> только example.com
 
-youtube.com
-youtu.be
-yt.be
 ytimg.com
 ggpht.com
 googlevideo.com
-youtube-nocookie.com
-youtubei.googleapis.com
-youtubeembeddedplayer.googleapis.com
-youtube-ui.l.google.com
-yt-video-upload.l.google.com
-yt3.googleusercontent.com
-youtube.googleapis.com
 wide-youtube.l.google.com
 ytimg.l.google.com
