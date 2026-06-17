@@ -19,3 +19,10 @@ youtubeembeddedplayer.googleapis.com
 youtube-ui.l.google.com
 yt-video-upload.l.google.com
 yt3.googleusercontent.com
+googleapis.com
+google.com
+youtube.googleapis.com
+wide-youtube.l.google.com
+ytimg.l.google.com
+gvt1.com
+youtubekids.com
