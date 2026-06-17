@@ -22,7 +22,7 @@ academy.terrasoft.ua 2
 account.wbgames.com 2
 activatica.org 3
 adafruit.com 3
-adguard-vpn.com 2
+adguard-vpn.com 3
 adguard.com 4
 adidas.com 2
 admin.instagram.com 2
@@ -287,6 +287,9 @@ csskor.ill.in.ua 2
 cub.red 3
 currenttime.tv 3
 curseforge.com 2
+cursor-cdn.com 2
+cursor.sh 2
+cursorapi.com 2
 cursorinfo.co.il 3
 cvedetails.com 2
 cyberghostvpn.com 3
@@ -415,6 +418,7 @@ essential.gg 2
 etahub.com 2
 etsy.com 4
 euronews.com 3
+europesays.com 2
 euroradio.fm 3
 eutrp.eu 3
 event.on24.com 3
@@ -481,7 +485,12 @@ forum.netgate.com 3
 forum.ru-board.com 2
 forum.voynaplemyon.com 3
 foxnews.com 2
+framer.app 2
 framer.com 2
+framercanvas.com 2
+framercdn.com 2
+framerstatic.com 2
+framerusercontent.com 2
 freedomletters.org 3
 freeimages.com 2
 freemedia.io 3
@@ -622,6 +631,7 @@ imagedelivery.net 2
 images.instagram.com 2
 imgur.com 2
 important-stories.com 2
+incy.cc 2
 indeed.com 2
 indiehackers.com 2
 infineon.com 2
@@ -653,13 +663,12 @@ jamf.com 2
 jetbrains.ai 3
 jetbrains.com 4
 jetbrains.space 2
+jetbrains.team 2
 jnn-pa.googleapis.com 2
 joesandbox.com 2
 jskor.ill.in.ua 2
 jut-su.net 2
 jut.su 3
-jw-russia.org 2
-jw.org 2
 k1-api.wbagora.com 2
 kaktus.media 3
 kaleido.ai 2
@@ -751,6 +760,7 @@ mailinator.com 2
 mailo.com 3
 make.com 2
 malwarebytes.com 4
+manga-chan.me 2
 mangadex.org 4
 mangahub.ru 3
 mangapark.net 2
@@ -800,6 +810,7 @@ miiverse.com 2
 mintmobile.com 2
 miracleptr.wordpress.com 2
 mixcloud.com 2
+mmcdn.com 2
 mobile.events.data.microsoft.com 3
 modartt.com 2
 modrinth.com 4
@@ -995,6 +1006,7 @@ patreonusercontent.com 2
 patriot.dp.ua 3
 pay.buckaroo.nl 3
 paypal.com 3
+paywithmoon.com 2
 pb.wtf 4
 pbs.twimg.com 2
 pbs.twimg.com.cdn.cloudflare.net 2
@@ -1235,6 +1247,8 @@ servarr.com 2
 services.gearboxsoftware.com 2
 severreal.org 3
 sfdcopens.com 2
+sharefile.com 2
+sharefile.io 2
 shift.services.gearbox.com 2
 shikimori.me 2
 shikimori.one 3
@@ -1250,6 +1264,7 @@ signon.goliath.prod.deadorbit.net 2
 signon.goliath.prod.gravityshavings.net 2
 signon2.deadorbit.net 2
 signon2.gravityshavings.net 2
+sigsauer.com 2
 simplex.chat 2
 simplex.im 2
 simplix.info 2
@@ -1357,6 +1372,7 @@ swapd.co 2
 swissinfo.ch 3
 synoforum.com 2
 sysdig.com 3
+syslog-ng.com 2
 t-invariant.org 3
 t.co 3
 t.me 2
@@ -1401,6 +1417,7 @@ thepiratebay.org 3
 theporndude.com 3
 thetruestory.news 3
 thetvdb.com 2
+threads.com 2
 threads.net 2
 threema.ch 3
 ti.com 2
