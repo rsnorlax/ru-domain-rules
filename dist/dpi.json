@@ -3,24 +3,44 @@
   "rules": [
     {
       "domain_suffix": [
+        "aistudio.google.com",
+        "bard.google.com",
+        "discord-attachments-uploads-prd.storage.googleapis.com",
+        "gemini.google.com",
         "ggpht.com",
+        "google.com",
+        "googleapis.com",
         "googlevideo.com",
+        "gvt1.com",
         "i.ytimg.com",
+        "jnn-pa.googleapis.com",
+        "lookerstudio.google.com",
         "m.youtube.com",
+        "meet.google.com",
         "music.youtube.com",
+        "news.google.com",
+        "play.google.com",
+        "proactivebackend-pa.googleapis.com",
+        "snap-storage-cdn.l.google.com",
+        "suggestqueries.google.com",
+        "tokenized.play.google.com",
+        "wide-youtube.l.google.com",
         "www.youtube.com",
         "youtu.be",
         "youtube-nocookie.com",
         "youtube-ui.l.google.com",
         "youtube.com",
+        "youtube.googleapis.com",
         "youtubeembeddedplayer.googleapis.com",
         "youtubei.googleapis.com",
+        "youtubekids.com",
         "yt-video-upload.l.google.com",
         "yt.be",
         "yt3.ggpht.com",
         "yt3.googleusercontent.com",
         "yt4.ggpht.com",
-        "ytimg.com"
+        "ytimg.com",
+        "ytimg.l.google.com"
       ]
     }
   ]
