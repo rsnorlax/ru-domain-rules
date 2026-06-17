@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-17T20:51:40.791670+00:00",
-  "generated_at_moscow": "2026-06-17T23:51:40.791670+03:00",
+  "generated_at_utc": "2026-06-17T21:19:53.827594+00:00",
+  "generated_at_moscow": "2026-06-18T00:19:53.827594+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -31,13 +31,13 @@
   "move_to_domains2_exact_count": 0,
   "move_to_domains3_suffix_count": 6,
   "move_to_domains3_exact_count": 0,
-  "move_to_dpi_suffix_count": 5,
+  "move_to_dpi_suffix_count": 12,
   "move_to_dpi_exact_count": 0,
   "all_domains_count": 82530,
   "duplicates_count": 1689,
-  "output_domains_count": 82494,
+  "output_domains_count": 82484,
   "output_domains2_count": 14,
   "output_domains3_count": 14,
-  "output_dpi_count": 8,
+  "output_dpi_count": 18,
   "errors": []
 }
