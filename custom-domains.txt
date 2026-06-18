@@ -55,7 +55,6 @@ hetzner.com
 ash-speed.hetzner.com
 testfile.org
 thinkbroadband.com
-mi.com
 githubusercontent.com
 github.com
 release-assets.githubusercontent.com
