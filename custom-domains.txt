@@ -49,7 +49,6 @@ habr.com
 notebookcheck-ru.com
 acasis.com
 lanik.us
-# WhatsApp full-ish через VPN
 whatsapp.com
 whatsapp.net
 wa.me
@@ -67,3 +66,6 @@ thinkbroadband.com
 githubusercontent.com
 github.com
 release-assets.githubusercontent.com
+oaistatsig.com
+cdn.openaimerge.com
+desktop.chat.openai.com
