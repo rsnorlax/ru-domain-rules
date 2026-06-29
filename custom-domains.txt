@@ -28,7 +28,16 @@ amazon.com
 versus.com
 4pda.to
 realme.com
-realme.com
+heytap.com
+heytapmobile.com
+heytapdl.com
+heytapmobi.com
+heytapimg.com
+heytapdownload.com
+oppomobile.com
+oppo.com
+myoppo.com
+nearme.com.cn
 realmemobile.com
 coloros.com
 allawnos.com
