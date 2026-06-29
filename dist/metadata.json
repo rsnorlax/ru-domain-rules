@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-29T04:57:31.097435+00:00",
-  "generated_at_moscow": "2026-06-29T07:57:31.097435+03:00",
+  "generated_at_utc": "2026-06-29T10:24:08.297036+00:00",
+  "generated_at_moscow": "2026-06-29T13:24:08.297036+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -26,18 +26,18 @@
       "domains": 1971
     }
   ],
-  "custom_domains_count": 44,
-  "move_to_domains2_suffix_count": 14,
+  "custom_domains_count": 54,
+  "move_to_domains2_suffix_count": 52,
   "move_to_domains2_exact_count": 0,
-  "move_to_domains3_suffix_count": 11,
+  "move_to_domains3_suffix_count": 0,
   "move_to_domains3_exact_count": 0,
   "move_to_dpi_suffix_count": 12,
   "move_to_dpi_exact_count": 0,
-  "all_domains_count": 82529,
+  "all_domains_count": 82539,
   "duplicates_count": 1689,
-  "output_domains_count": 82476,
-  "output_domains2_count": 14,
-  "output_domains3_count": 21,
+  "output_domains_count": 82459,
+  "output_domains2_count": 62,
+  "output_domains3_count": 0,
   "output_dpi_count": 18,
   "errors": []
 }

@@ -2,29 +2,7 @@
   "version": 3,
   "rules": [
     {
-      "domain_suffix": [
-        "bulk.nnmclub.to",
-        "de.redtube.com",
-        "e1v-h.phncdn.com",
-        "fr.redtube.com",
-        "ipv4.nnmclub.to",
-        "it.redtube.com",
-        "nnmclub.to",
-        "phncdn.com",
-        "phncdn.com.sds.rncdn7.com",
-        "pornhub.com",
-        "pornhub.org",
-        "redtube.com",
-        "rt.pornhub.com",
-        "rt.pornhub.org",
-        "ru.pornhub.com",
-        "ru.redtube.com",
-        "rutracker.net",
-        "rutracker.org",
-        "www.nnmclub.to",
-        "www.redtube.com",
-        "www.rutracker.org"
-      ]
+      "domain_suffix": []
     }
   ]
 }
