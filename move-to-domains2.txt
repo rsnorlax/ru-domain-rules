@@ -62,3 +62,6 @@ tcr9i.chat.openai.com
 turn.livekit.cloud
 ai.com
 sora.com
+oaistatsig.com
+cdn.openaimerge.com
+desktop.chat.openai.com
