@@ -69,3 +69,4 @@ release-assets.githubusercontent.com
 oaistatsig.com
 cdn.openaimerge.com
 desktop.chat.openai.com
+vc.ru
