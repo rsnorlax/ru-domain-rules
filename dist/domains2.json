@@ -4,6 +4,7 @@
     {
       "domain_suffix": [
         "cdn-telegram.org",
+        "rutracker.org",
         "t.me",
         "tdesktop.com",
         "telega.one",
@@ -15,7 +16,8 @@
         "telegram.space",
         "telesco.pe",
         "tg.dev",
-        "tx.me"
+        "tx.me",
+        "www.rutracker.org"
       ]
     }
   ]
