@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-07-24T08:30:10.865040+00:00",
-  "generated_at_moscow": "2026-07-24T11:30:10.865040+03:00",
+  "generated_at_utc": "2026-07-24T08:33:21.449679+00:00",
+  "generated_at_moscow": "2026-07-24T11:33:21.449679+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -26,7 +26,7 @@
       "domains": 1992
     }
   ],
-  "custom_domains_count": 58,
+  "custom_domains_count": 59,
   "move_to_domains2_suffix_count": 13,
   "move_to_domains2_exact_count": 0,
   "move_to_domains3_suffix_count": 0,
