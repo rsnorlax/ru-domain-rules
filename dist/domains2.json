@@ -3,12 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
-        "bulk.nnmclub.to",
         "cdn-telegram.org",
-        "ipv4.nnmclub.to",
-        "nnmclub.to",
-        "rutracker.net",
-        "rutracker.org",
         "t.me",
         "tdesktop.com",
         "telega.one",
@@ -20,9 +15,7 @@
         "telegram.space",
         "telesco.pe",
         "tg.dev",
-        "tx.me",
-        "www.nnmclub.to",
-        "www.rutracker.org"
+        "tx.me"
       ]
     }
   ]
