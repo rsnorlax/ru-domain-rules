@@ -24,3 +24,5 @@ telesco.pe
 tg.dev
 tx.me
 nnmclub.to
+rutracker.org
+rutracker.net
