@@ -71,3 +71,4 @@ cdn.openaimerge.com
 desktop.chat.openai.com
 vc.ru
 rutracker.org
+reddit.com
