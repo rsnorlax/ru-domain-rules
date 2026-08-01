@@ -836,7 +836,7 @@ musixmatch.com 3
 mw2.wiki 3
 myanimelist.net 3
 mydoramy.club 3
-myheritage.com 2
+myheritage.com 3
 myjetbrains.com 2
 myparallels.com 2
 myqrcode.com 2

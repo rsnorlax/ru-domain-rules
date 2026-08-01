@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-07-31T03:47:17.156786+00:00",
-  "generated_at_moscow": "2026-07-31T06:47:17.156786+03:00",
+  "generated_at_utc": "2026-08-01T03:46:35.875461+00:00",
+  "generated_at_moscow": "2026-08-01T06:46:35.875461+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -18,7 +18,7 @@
     {
       "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst",
       "ok": true,
-      "domains": 672
+      "domains": 675
     },
     {
       "url": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/ru-bundle.lst",
@@ -33,9 +33,9 @@
   "move_to_domains3_exact_count": 0,
   "move_to_dpi_suffix_count": 12,
   "move_to_dpi_exact_count": 0,
-  "all_domains_count": 87426,
+  "all_domains_count": 87428,
   "duplicates_count": 1690,
-  "output_domains_count": 87392,
+  "output_domains_count": 87394,
   "output_domains2_count": 17,
   "output_domains3_count": 0,
   "output_dpi_count": 17,
