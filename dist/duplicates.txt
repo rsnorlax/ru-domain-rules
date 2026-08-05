@@ -1,6 +1,6 @@
 10minutemail.com 3
 1337x.to 3
-24.kg 3
+24.kg 2
 4freerussia.org 3
 4pda.ru 2
 4pda.to 5
@@ -59,7 +59,7 @@ aistudio.google.com 2
 akc.org 2
 alberta.ca 3
 all3dp.com 2
-allegro.pl 3
+allegro.pl 2
 alphacoders.com 2
 alza.hu 2
 amazfitwatchfaces.com 2
@@ -140,7 +140,7 @@ autodesk.io 2
 autodesk.net 3
 autodesk360.com 2
 autodiscover.instagram.com 2
-avira.com 3
+avira.com 2
 azathabar.com 3
 azattyq.org 3
 babepedia.com 3
@@ -278,7 +278,7 @@ coomer.su 2
 copilot-proxy.githubusercontent.com 3
 copilot.microsoft.com 4
 corsair.com 2
-coursera.org 3
+coursera.org 2
 cpu-monkey.com 2
 credly.com 2
 croxyproxy.com 3
@@ -458,7 +458,6 @@ fingerium.stream.voidboost.cc 2
 firefly-ps.adobe.io 3
 fitgirl-repacks.site 2
 fivetran.com 2
-flashscore.com 2
 flibusta.is 4
 flibusta.net 2
 flipboard.com 3
@@ -560,14 +559,14 @@ grizzlysms.com 3
 grok.com 4
 grok.x.com 2
 groq.com 2
-groupon.com 3
+groupon.com 2
 gtagarage.com 2
 guilded.gg 2
 gulagu.net 2
 gvt1.com 2
 habr.com 5
 hackernoon.com 2
-hackmd.io 3
+hackmd.io 2
 halooglasi.com 2
 hashicorp.com 2
 hath.network 2
@@ -598,7 +597,7 @@ home-connect.com 2
 home.by.me 2
 host.livekit.cloud 2
 hostgator.com 3
-hostinger.com 3
+hostinger.com 2
 hotels.com 2
 housebrand.com 2
 hqporner.com 3
@@ -642,7 +641,7 @@ intel.com 4
 intel.de 2
 intel.nl 2
 intelix.sophos.com 2
-interactivebrokers.co.uk 3
+interactivebrokers.co.uk 2
 intercom.io 2
 interfax.com.ua 3
 internalfb.com 3
@@ -733,7 +732,7 @@ lingq.com 2
 linkedin.com 3
 linktr.ee 3
 linuxiac.com 3
-livetv.sx 3
+livetv.sx 2
 liveuamap.com 3
 localbitcoins.com 3
 locals.md 3
@@ -793,7 +792,6 @@ mega.co.nz 2
 mega.nz 2
 megapeer.ru 4
 megapeer.vip 3
-megogo.net 2
 memohrc.org 3
 merezha.co 3
 meta.com 2
@@ -836,7 +834,7 @@ musixmatch.com 3
 mw2.wiki 3
 myanimelist.net 3
 mydoramy.club 3
-myheritage.com 3
+myheritage.com 4
 myjetbrains.com 2
 myparallels.com 2
 myqrcode.com 2
@@ -927,6 +925,7 @@ nordaccount.com 4
 nordcdn.com 4
 nordvpn.com 4
 notebooklm.google 2
+notebooklm.google.com 2
 notepad-plus-plus.org 4
 notion-emojis.s3-us-west-2.amazonaws.com 2
 notion-static.com 2
@@ -956,7 +955,7 @@ ohmyswift.ru 3
 ohmyz.sh 2
 oi.legal 3
 okx.com 2
-olx.ua 3
+olx.ua 2
 omnissa.com 2
 omtrdc.net 2
 omv-extras.org 4
@@ -975,7 +974,7 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 3
+opensea.io 2
 opentrackr.org 2
 openwrt.wk.cz 3
 opposition-news.com 2
@@ -1019,9 +1018,9 @@ pdq.com 2
 penguin.com 2
 penguinrandomhouse.com 2
 penpot.app 2
-periscope.tv 3
+periscope.tv 2
 personaltrainermath.com 2
-pexels.com 3
+pexels.com 2
 philiascans.org 2
 phncdn.com 4
 phncdn.com.sds.rncdn7.com 2
@@ -1073,7 +1072,7 @@ posle.media 3
 posthog.com 2
 postimees.ee 3
 ppy.sh 2
-pravda.com 3
+pravda.com 2
 pravda.com.ua 3
 premierleague.com 2
 primark.com 2
@@ -1088,7 +1087,7 @@ proekt.media 3
 profitwell.com 2
 pronouns.page 3
 prosleduetmedia.com 3
-prostovpn.org 3
+prostovpn.org 2
 proton.me 3
 protonmail.ch 2
 protonmail.com 3
@@ -1096,10 +1095,11 @@ protonvpn.com 3
 provereno.media 3
 prowlarr.com 2
 proxyscrape.com 2
-pscp.tv 3
+pscp.tv 2
 psiphon.ca 3
 public.parsec.app 2
 pump.fun 3
+pushbr.com 2
 pvpessence.com 2
 qobuz.com 2
 qodana.cloud 2
@@ -1329,7 +1329,7 @@ stable.dl2.discordapp.net 2
 stalker2.com 2
 starfox.com 2
 startmail.com 3
-startpage.com 3
+startpage.com 2
 static.cdninstagram.com 2
 static.files.bbci.co.uk 3
 static.lostfilm.top 2
@@ -1418,7 +1418,7 @@ thepiratebay.org 3
 theporndude.com 3
 thetruestory.news 3
 thetvdb.com 2
-threads.com 3
+threads.com 2
 threads.net 2
 threema.ch 3
 ti.com 2
@@ -1504,7 +1504,7 @@ ui.ill.in.ua 2
 uizard.io 2
 ukdevilz.com 2
 ukr.net 3
-ukr.radio 3
+ukr.radio 2
 ukrainer.net 3
 ukrinform.net 3
 ukrtelcdn.net 2
@@ -1514,7 +1514,7 @@ unian.net 3
 unian.ua 3
 uniongang.tv 3
 unscreen.com 2
-unsplash.com 3
+unsplash.com 2
 ununbium.stream.voidboost.cc 2
 upload.instagram.com 2
 upwork.com 2
