@@ -72,3 +72,4 @@ desktop.chat.openai.com
 vc.ru
 rutracker.org
 reddit.com
+wallpaperscraft.com
