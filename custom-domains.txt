@@ -77,3 +77,4 @@ cypht.org
 nextcloud.com
 aqua-mail.com
 bluemail.me
+getmailbird.com
