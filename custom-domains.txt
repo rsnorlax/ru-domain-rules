@@ -79,3 +79,4 @@ aqua-mail.com
 bluemail.me
 getmailbird.com
 epim.com
+thunderbird.net
