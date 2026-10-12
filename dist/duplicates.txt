@@ -140,7 +140,7 @@ autodesk.io 2
 autodesk.net 3
 autodesk360.com 2
 autodiscover.instagram.com 2
-avira.com 2
+avira.com 3
 azathabar.com 3
 azattyq.org 3
 babepedia.com 3
@@ -175,6 +175,7 @@ blinkshot.io 2
 blog.business.instagram.com 2
 blog.instagram.com 2
 bloody.com 2
+bluearchiveyostar.com 2
 bluehost.com 3
 bng.gg 2
 booktracker.org 4
@@ -490,6 +491,7 @@ framercanvas.com 2
 framercdn.com 2
 framerstatic.com 2
 framerusercontent.com 2
+freeanimehentai.net 2
 freedomletters.org 3
 freeimages.com 2
 freemedia.io 3
@@ -568,6 +570,7 @@ habr.com 5
 hackernoon.com 2
 hackmd.io 2
 halooglasi.com 2
+hanime-cdn.com 2
 hashicorp.com 2
 hath.network 2
 haydaygame.com 2
@@ -974,7 +977,7 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 2
+opensea.io 3
 opentrackr.org 2
 openwrt.wk.cz 3
 opposition-news.com 2
@@ -1072,7 +1075,7 @@ posle.media 3
 posthog.com 2
 postimees.ee 3
 ppy.sh 2
-pravda.com 2
+pravda.com 3
 pravda.com.ua 3
 premierleague.com 2
 primark.com 2
@@ -1083,6 +1086,7 @@ prnt.sc 4
 proactivebackend-pa.googleapis.com 2
 prod-network-api.wbagora.com 2
 production-openaicom-storage.azureedge.net 4
+production.cloudfront.docker.com 2
 proekt.media 3
 profitwell.com 2
 pronouns.page 3
@@ -1541,6 +1545,7 @@ vine.co 2
 vintagestory.at 2
 vipdrive.net 3
 vipergirls.to 2
+virustotal.com 2
 visualcapitalist.com 2
 vmware.com 2
 vndb.org 2
@@ -1659,6 +1664,7 @@ xvideos.com 3
 yande.re 3
 yeggi.com 2
 yle.fi 3
+yostarplat.com 2
 youtrack.cloud 2
 youtu.be 4
 youtube-nocookie.com 4
