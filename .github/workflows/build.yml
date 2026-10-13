@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
 
@@ -33,21 +33,33 @@ jobs:
           python scripts/build.py
 
       - name: Install sing-box
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
           python - <<'PY' > /tmp/sing-box-url.txt
           import json
+          import os
           import urllib.request
 
           api = "https://api.github.com/repos/SagerNet/sing-box/releases/latest"
+          request = urllib.request.Request(
+              api,
+              headers={
+                  "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+                  "Accept": "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+                  "User-Agent": "rsnorlax-ru-domain-rules",
+              },
+          )
 
-          with urllib.request.urlopen(api, timeout=60) as response:
+          with urllib.request.urlopen(request, timeout=60) as response:
               data = json.load(response)
 
-          for asset in data["assets"]:
-              name = asset["name"]
-              url = asset["browser_download_url"]
+          for asset in data.get("assets", []):
+              name = asset.get("name", "")
+              url = asset.get("browser_download_url", "")
 
               if (
                   "linux-amd64" in name
@@ -64,11 +76,11 @@ jobs:
           SING_BOX_URL="$(cat /tmp/sing-box-url.txt)"
           echo "Downloading: ${SING_BOX_URL}"
 
-          curl -L "$SING_BOX_URL" -o /tmp/sing-box.tar.gz
+          curl -fL --retry 3 "$SING_BOX_URL" -o /tmp/sing-box.tar.gz
           mkdir -p /tmp/sing-box
           tar -xzf /tmp/sing-box.tar.gz -C /tmp/sing-box
 
-          SING_BOX_BIN="$(find /tmp/sing-box -type f -name sing-box -perm -111 | head -n 1)"
+          SING_BOX_BIN="$(find /tmp/sing-box -type f -name sing-box -perm -111 -print -quit)"
           if [ -z "$SING_BOX_BIN" ]; then
             echo "sing-box binary not found"
             exit 1
