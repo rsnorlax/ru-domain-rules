@@ -88,12 +88,13 @@ anistar.org 3
 anistars.ru 2
 annas-archive.org 2
 ansys.com 2
-anthropic.com 2
+anthropic.com 3
 anthropic.qualtrics.com 2
 antizapret.prostovpn.org 3
 any.do 2
 aol.com 3
 api.app.prod.grazie.aws.intellij.net 3
+api.elevenlabs.io 2
 api.github.com 3
 api.githubcopilot.com 3
 api.home-connect.com 3
@@ -289,7 +290,7 @@ cub.red 3
 currenttime.tv 3
 curseforge.com 2
 cursor-cdn.com 2
-cursor.sh 2
+cursor.sh 3
 cursorapi.com 2
 cursorinfo.co.il 3
 cvedetails.com 2
@@ -408,7 +409,7 @@ ej.ru 4
 ekhokavkaza.com 3
 element14.com 2
 elements.envato.com 3
-elevenlabs.io 3
+elevenlabs.io 4
 elgato.com 2
 eneba.com 2
 epidemz.net.co 3
@@ -527,6 +528,7 @@ ghostrc.game.idtech.services 4
 gifyu.com 3
 git.new 2
 githubcopilot.com 3
+githubusercontent.com 2
 gitlab.io 3
 glavred.info 3
 glavred.net 3
@@ -542,6 +544,8 @@ golosameriki.com 3
 gonift.com 2
 gonitro.com 2
 goodreads.com 3
+google.com 2
+googleapis.com 2
 googletagmanager.com 3
 googlevideo.com 4
 gordonua.com 3
@@ -571,7 +575,7 @@ hackernoon.com 2
 hackmd.io 2
 halooglasi.com 2
 hanime-cdn.com 2
-hashicorp.com 2
+hashicorp.com 3
 hath.network 2
 haydaygame.com 2
 hbomax.com 4
@@ -589,6 +593,7 @@ hdrzk.org 2
 hdstudio.org 2
 healthline.com 2
 helm.releases.hashicorp.com 3
+help.elevenlabs.io 2
 help.instagram.com 2
 hentai-foundry.com 2
 herokucdn.com 2
@@ -692,7 +697,7 @@ kinogo.uk 2
 kinopub.me 2
 kinovod.net 2
 kinozal.guru 2
-kinozal.me 2
+kinozal.me 3
 kinozal.tv 3
 kinozaltv.life 2
 klarna.com 2
@@ -735,7 +740,7 @@ lingq.com 2
 linkedin.com 3
 linktr.ee 3
 linuxiac.com 3
-livetv.sx 2
+livetv.sx 3
 liveuamap.com 3
 localbitcoins.com 3
 locals.md 3
@@ -743,6 +748,7 @@ login.amd.com 3
 lolz.guru 3
 lookerstudio.google.com 2
 lostfilm.download 2
+lostfilm.today 2
 lostfilm.tv 4
 lostfilm.tw 2
 lostfilm.uno 2
@@ -977,7 +983,7 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 3
+opensea.io 2
 opentrackr.org 2
 openwrt.wk.cz 3
 opposition-news.com 2
@@ -1099,7 +1105,7 @@ protonvpn.com 3
 provereno.media 3
 prowlarr.com 2
 proxyscrape.com 2
-pscp.tv 2
+pscp.tv 3
 psiphon.ca 3
 public.parsec.app 2
 pump.fun 3
@@ -1188,7 +1194,7 @@ rustorka.com 3
 rutor.info 4
 rutor.is 4
 rutor.org 3
-rutracker.cc 2
+rutracker.cc 3
 rutracker.net 3
 rutracker.org 4
 rutracker.wiki 3
@@ -1248,7 +1254,7 @@ sentry.dev 2
 sentry.io 4
 sephora.com 2
 serpstat.com 3
-servarr.com 2
+servarr.com 3
 services.gearboxsoftware.com 2
 severreal.org 3
 sfdcopens.com 2
@@ -1609,7 +1615,7 @@ wikidot.com 2
 wilsoncenter.org 3
 windguru.cz 3
 windows10spotlight.com 2
-windsurf.com 2
+windsurf.com 3
 wise.com 4
 wixmp.com 3
 wonderzine.com 3
