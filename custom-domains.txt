@@ -84,3 +84,4 @@ virustotal.com
 mailflow.sh
 tinycld.org
 pnpm.io
+ash-speed.hetzner.com
