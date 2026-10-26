@@ -19,6 +19,7 @@ youtube-nocookie.com
 wide-youtube.l.google.com
 ytimg.l.google.com
 youtubei.googleapis.com
+youtube.googleapis.com
 youtubeembeddedplayer.googleapis.com
 youtube-ui.l.google.com
 yt-video-upload.l.google.com
