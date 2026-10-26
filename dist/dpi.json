@@ -6,8 +6,11 @@
         "ggpht.com",
         "googlevideo.com",
         "i.ytimg.com",
+        "jnn-pa.googleapis.com",
         "m.youtube.com",
         "music.youtube.com",
+        "returnyoutubedislikeapi.com",
+        "wide-youtube.l.google.com",
         "www.youtube.com",
         "youtu.be",
         "youtube-nocookie.com",
@@ -15,12 +18,15 @@
         "youtube.com",
         "youtubeembeddedplayer.googleapis.com",
         "youtubei.googleapis.com",
+        "youtubekids.com",
         "yt-video-upload.l.google.com",
         "yt.be",
         "yt3.ggpht.com",
         "yt3.googleusercontent.com",
         "yt4.ggpht.com",
-        "ytimg.com"
+        "ytimg.com",
+        "ytimg.l.google.com",
+        "yting.com"
       ]
     }
   ]
