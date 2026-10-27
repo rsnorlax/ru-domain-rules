@@ -147,6 +147,7 @@ azattyq.org 3
 babepedia.com 3
 babook.org 3
 backend-v2.crixet.com 2
+badoo.com 2
 baginya.org 3
 baikal-journal.ru 3
 bard.google.com 3
@@ -201,6 +202,7 @@ buanzo.org 2
 buf.build 2
 bufferbloat.net 2
 builds.parsec.app 4
+bumble.com 2
 bungiestore.com 2
 business.instagram.com 2
 buymeacoffee.com 2
@@ -250,6 +252,7 @@ clashofclans.com 4
 clashroyaleapp.com 4
 claude.ai 4
 claude.com 2
+claudeusercontent.com 2
 clevelandclinic.org 2
 clickup.com 2
 clip.opus.pro 2
@@ -410,7 +413,7 @@ ekhokavkaza.com 3
 element14.com 2
 elements.envato.com 3
 elevenlabs.io 4
-elgato.com 2
+elgato.com 3
 eneba.com 2
 epidemz.net.co 3
 eporner.com 3
@@ -801,6 +804,7 @@ mega.co.nz 2
 mega.nz 2
 megapeer.ru 4
 megapeer.vip 3
+megazakaz.com 2
 memohrc.org 3
 merezha.co 3
 meta.com 2
@@ -1648,6 +1652,7 @@ www3.corsair.com 2
 x-minus.pro 3
 x.ai 4
 x.com 3
+xda-developers.com 2
 xenoblade.com 2
 xhamster.com 4
 xhamsterlive.com 4
