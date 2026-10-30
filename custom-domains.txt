@@ -42,7 +42,6 @@ realmemobile.com
 coloros.com
 allawnos.com
 allawntech.com
-stacher.io
 zoiper.com
 aeza.net
 habr.com
@@ -86,3 +85,4 @@ tinycld.org
 pnpm.io
 ash-speed.hetzner.com
 github.io
+iana.org
