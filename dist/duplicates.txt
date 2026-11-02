@@ -301,7 +301,7 @@ cyberghostvpn.com 3
 cyxymu.info 2
 czx.to 3
 d.docs.live.net 3
-daemon-tools.cc 2
+daemon-tools.cc 3
 dailylviv.com 3
 danbooru.donmai.us 3
 dashboard.algolia.com 2
@@ -532,6 +532,7 @@ gifyu.com 3
 git.new 2
 githubcopilot.com 3
 githubusercontent.com 2
+gitlab.com 2
 gitlab.io 3
 glavred.info 3
 glavred.net 3
@@ -547,7 +548,6 @@ golosameriki.com 3
 gonift.com 2
 gonitro.com 2
 goodreads.com 3
-google.com 2
 googleapis.com 2
 googletagmanager.com 3
 googlevideo.com 4
@@ -743,7 +743,7 @@ lingq.com 2
 linkedin.com 3
 linktr.ee 3
 linuxiac.com 3
-livetv.sx 3
+livetv.sx 2
 liveuamap.com 3
 localbitcoins.com 3
 locals.md 3
@@ -821,6 +821,9 @@ miitomo.com 2
 miiverse.com 2
 mintmobile.com 2
 miracleptr.wordpress.com 2
+miro-apps.com 2
+miro.com 2
+mirostatic.com 2
 mixcloud.com 2
 mmcdn.com 2
 mobile.events.data.microsoft.com 3
@@ -976,6 +979,7 @@ onfastspring.com 2
 onlineradiobox.com 3
 onlinesim.io 2
 onlinesim.ru 3
+onlinewhiteboard.com 2
 onshape.com 2
 openai.com 4
 openai.com.cdn.cloudflare.net 2
@@ -987,8 +991,8 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 2
-opentrackr.org 2
+opensea.io 3
+opentrackr.org 3
 openwrt.wk.cz 3
 opposition-news.com 2
 oracle.com 2
@@ -1047,7 +1051,7 @@ pixiv.net 4
 pkgs.tailscale.com 4
 platform.activestate.com 2
 platform.twitter.com 3
-playboy.com 2
+playboy.com 3
 playnintendo.com 2
 plugshare.com 2
 pokedex3d.com 2
@@ -1109,7 +1113,7 @@ protonvpn.com 3
 provereno.media 3
 prowlarr.com 2
 proxyscrape.com 2
-pscp.tv 3
+pscp.tv 2
 psiphon.ca 3
 public.parsec.app 2
 pump.fun 3
@@ -1136,6 +1140,7 @@ rbxcdn.com 2
 reactflow.dev 2
 realbooru.com 3
 realist.online 3
+realtimeboard.com 2
 recraft.ai 2
 reddxxx.com 3
 redgifs.com 3
@@ -1181,6 +1186,7 @@ roblox.com 2
 root-nation.com 3
 roskomsvoboda.org 3
 rpm.grafana.com 3
+rt.pornhub.org 2
 ru.bellingcat.com 2
 ru.depositphotos.com 3
 ru.iherb.com 3
@@ -1587,6 +1593,7 @@ weblance.com.ua 3
 webmd.com 2
 webnames.ca 2
 webtoons.com 2
+webwhiteboard.com 2
 weebly.com 2
 welt.de 4
 wetransfer.com 4
