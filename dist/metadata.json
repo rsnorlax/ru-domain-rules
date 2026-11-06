@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-05T06:37:35.259222+00:00",
-  "generated_at_moscow": "2026-11-05T09:37:35.259222+03:00",
+  "generated_at_utc": "2026-11-06T06:33:37.204856+00:00",
+  "generated_at_moscow": "2026-11-06T09:33:37.204856+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -23,7 +23,7 @@
     {
       "url": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/ru-bundle.lst",
       "ok": true,
-      "domains": 2111
+      "domains": 2117
     }
   ],
   "custom_domains_count": 73,
@@ -33,9 +33,9 @@
   "move_to_domains3_exact_count": 0,
   "move_to_dpi_suffix_count": 19,
   "move_to_dpi_exact_count": 0,
-  "all_domains_count": 83471,
+  "all_domains_count": 83477,
   "duplicates_count": 1714,
-  "output_domains_count": 83446,
+  "output_domains_count": 83452,
   "output_domains2_count": 0,
   "output_domains3_count": 0,
   "output_dpi_count": 25,
