@@ -93,6 +93,7 @@ anthropic.qualtrics.com 2
 antizapret.prostovpn.org 3
 any.do 2
 aol.com 3
+api-dashboard.search.brave.com 2
 api.app.prod.grazie.aws.intellij.net 3
 api.elevenlabs.io 2
 api.github.com 3
@@ -548,7 +549,6 @@ golosameriki.com 3
 gonift.com 2
 gonitro.com 2
 goodreads.com 3
-googleapis.com 2
 googletagmanager.com 3
 googlevideo.com 4
 gordonua.com 3
@@ -556,7 +556,7 @@ gpsonextra.net 2
 gpu-monkey.com 2
 gql.twitch.tv 4
 gr-assets.com 2
-grafana.com 2
+grafana.com 3
 grammarly.com 3
 grani.ru 2
 graph.whatsapp.com 2
@@ -578,7 +578,7 @@ hackernoon.com 2
 hackmd.io 2
 halooglasi.com 2
 hanime-cdn.com 2
-hashicorp.com 3
+hashicorp.com 2
 hath.network 2
 haydaygame.com 2
 hbomax.com 4
@@ -808,6 +808,7 @@ megazakaz.com 2
 memohrc.org 3
 merezha.co 3
 meta.com 2
+metacrawler.com 2
 metacritic.com 4
 metal-archives.com 3
 metallica-api.wbagora.com 2
@@ -1626,7 +1627,7 @@ wikidot.com 2
 wilsoncenter.org 3
 windguru.cz 3
 windows10spotlight.com 2
-windsurf.com 3
+windsurf.com 2
 wise.com 4
 wixmp.com 3
 wonderzine.com 3
