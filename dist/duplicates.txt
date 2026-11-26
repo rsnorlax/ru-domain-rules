@@ -404,7 +404,7 @@ echofm.online 3
 edge.microsoft.com 3
 edgeservices.bing.com 3
 editorx.com 2
-edu-cisco.org 2
+edu-cisco.org 3
 ef.com 2
 ef.edu 2
 eggertspiele.de 2
@@ -533,7 +533,6 @@ gifyu.com 3
 git.new 2
 githubcopilot.com 3
 githubusercontent.com 2
-gitlab.com 2
 gitlab.io 3
 glavred.info 3
 glavred.net 3
@@ -608,7 +607,7 @@ home-connect.com 2
 home.by.me 2
 host.livekit.cloud 2
 hostgator.com 3
-hostinger.com 2
+hostinger.com 3
 hotels.com 2
 housebrand.com 2
 hqporner.com 3
@@ -743,7 +742,7 @@ lingq.com 2
 linkedin.com 3
 linktr.ee 3
 linuxiac.com 3
-livetv.sx 2
+livetv.sx 3
 liveuamap.com 3
 localbitcoins.com 3
 locals.md 3
@@ -825,6 +824,7 @@ miracleptr.wordpress.com 2
 miro-apps.com 2
 miro.com 2
 mirostatic.com 2
+mistral.ai 2
 mixcloud.com 2
 mmcdn.com 2
 mobile.events.data.microsoft.com 3
@@ -992,8 +992,8 @@ openh264.org 2
 openmedia.io 3
 openrouter.ai 2
 opensanctions.org 3
-opensea.io 3
-opentrackr.org 3
+opensea.io 2
+opentrackr.org 2
 openwrt.wk.cz 3
 opposition-news.com 2
 oracle.com 2
@@ -1052,9 +1052,10 @@ pixiv.net 4
 pkgs.tailscale.com 4
 platform.activestate.com 2
 platform.twitter.com 3
-playboy.com 3
+playboy.com 2
 playnintendo.com 2
 plugshare.com 2
+pnpm.io 2
 pokedex3d.com 2
 pokemon-moon.com 2
 pokemon-sun.com 2
@@ -1187,7 +1188,6 @@ roblox.com 2
 root-nation.com 3
 roskomsvoboda.org 3
 rpm.grafana.com 3
-rt.pornhub.org 2
 ru.bellingcat.com 2
 ru.depositphotos.com 3
 ru.iherb.com 3
@@ -1205,7 +1205,7 @@ rustorka.com 3
 rutor.info 4
 rutor.is 4
 rutor.org 3
-rutracker.cc 3
+rutracker.cc 2
 rutracker.net 3
 rutracker.org 4
 rutracker.wiki 3
@@ -1265,7 +1265,7 @@ sentry.dev 2
 sentry.io 4
 sephora.com 2
 serpstat.com 3
-servarr.com 3
+servarr.com 2
 services.gearboxsoftware.com 2
 severreal.org 3
 sfdcopens.com 2
@@ -1696,7 +1696,7 @@ youtubekids.com 4
 yt-video-upload.l.google.com 4
 yt.be 4
 yt3.ggpht.com 2
-yt3.googleusercontent.com 2
+yt3.googleusercontent.com 3
 ytimg.com 4
 ytimg.l.google.com 2
 yting.com 2

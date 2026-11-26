@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-25T08:23:13.977077+00:00",
-  "generated_at_moscow": "2026-11-25T11:23:13.977077+03:00",
+  "generated_at_utc": "2026-11-26T08:07:58.626783+00:00",
+  "generated_at_moscow": "2026-11-26T11:07:58.626783+03:00",
   "sources_count": 4,
   "sources_ok": 4,
   "sources_failed": 0,
@@ -13,7 +13,7 @@
     {
       "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst",
       "ok": true,
-      "domains": 82138
+      "domains": 81454
     },
     {
       "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst",
@@ -33,11 +33,11 @@
   "move_to_domains3_exact_count": 0,
   "move_to_dpi_suffix_count": 19,
   "move_to_dpi_exact_count": 0,
-  "all_domains_count": 83567,
+  "all_domains_count": 82884,
   "duplicates_count": 1715,
-  "output_domains_count": 83542,
+  "output_domains_count": 82856,
   "output_domains2_count": 0,
   "output_domains3_count": 0,
-  "output_dpi_count": 25,
+  "output_dpi_count": 28,
   "errors": []
 }
